@@ -67,4 +67,4 @@ The BNVR has default properties and you can change it as what you want, here are
 | app:bottomNavigationCornerRadius | dimension | 10dp  | Change corner radius |
 
 ## 📝 License
-This project is under MIT License. See the [LICENSE]('https://github.com/bumptech/glide/blob/master/LICENSE') file for details.
+This project is under MIT License. See the [LICENSE](https://github.com/bumptech/glide/blob/master/LICENSE) file for details.
