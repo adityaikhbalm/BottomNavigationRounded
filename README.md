@@ -1,5 +1,4 @@
 # BNVR
--------
 [![](https://jitpack.io/v/adityaikhbalm/bottomnavigationrounded.svg)](https://jitpack.io/#adityaikhbalm/bottomnavigationrounded) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/adityaikhbalm/bottomnavigationrounded) [![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=21) [![GitHub license](https://img.shields.io/github/license/adityaikhbalm/bottomnavigationrounded)](https://github.com/adityaikhbalm/bottomnavigationrounded/blob/master/LICENSE)
 
 Bottom Navigation View Rounded short BNVR it's basically BottomNavigationView with some custom to create navigation with rounded corners.
@@ -8,7 +7,6 @@ Bottom Navigation View Rounded short BNVR it's basically BottomNavigationView wi
 See the latest released BNVR version [here](https://github.com/adityaikhbalm/bottomnavigationrounded/releases).
 
 ## ✍️ Installation
--------
 #### Gradle setup
 ```gradle
 // project level gradle
@@ -46,12 +44,10 @@ dependencies {
 ```
 
 ## 💻 Compatibility
--------
  * **Minimum Android SDK**: Requires a minimum API level of 21.
  * **Compile Android SDK**: Requires you to compile against API 30 or later.
 
 ## 🚀️ Getting Started
--------
 #### XML Layout
 BNVR usage is pretty simple, you just need put code in your xml layout.
 ```xml
@@ -72,5 +68,4 @@ The BNVR has default properties and you can change it as what you want, here are
 | app:bottomNavigationCornerRadius | dimension | 10dp  | Change corner radius |
 
 ## 📝 License
--------
 This project is under MIT License. See the [LICENSE]('https://github.com/bumptech/glide/blob/master/LICENSE') file for details.
