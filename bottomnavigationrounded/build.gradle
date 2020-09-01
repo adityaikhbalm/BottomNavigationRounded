@@ -1,6 +1,5 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply from: "maven-publish-helper-usage.gradle"
 
 android {
     compileSdkVersion 30
