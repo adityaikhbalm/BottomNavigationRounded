@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="BottomNavigationViewRounded">
-        <attr name="backgroundColor" format="reference|color"/>
+        <attr name="bottomNavigationColor" format="reference|color"/>
+        <attr name="bottomNavigationCornerRadius" format="dimension"/>
     </declare-styleable>
 </resources>

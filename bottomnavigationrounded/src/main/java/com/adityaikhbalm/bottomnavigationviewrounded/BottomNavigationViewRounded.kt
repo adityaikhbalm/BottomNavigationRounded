@@ -2,6 +2,7 @@ package com.adityaikhbalm.bottomnavigationviewrounded
 
 import android.content.Context
 import android.content.res.Resources
+import android.content.res.TypedArray
 import android.graphics.Canvas
 import android.graphics.Path
 import android.graphics.RectF
@@ -16,22 +17,30 @@ class BottomNavigationViewRounded(
     attrs: AttributeSet?
 ) : BottomNavigationView(context, attrs) {
 
-    private var mPath = Path()
-    private var cornerDimensions = FloatArray(8)
+    private var mPath: Path = Path()
+    private var cornerDimensions: FloatArray = FloatArray(8)
 
     init {
-        val bottomNavigationDrawable =
+        val bottomNavigationDrawable: ShapeDrawable =
             ShapeDrawable(RoundRectShape(cornerDimensions,null,null))
+        var cornerRadius: Int = 0
 
         if (attrs != null) {
-            val ta = context.obtainStyledAttributes(attrs, R.styleable.BottomNavigationViewRounded)
-            val backgroundColor = ta.getColor(R.styleable.BottomNavigationViewRounded_backgroundColor, NO_ID)
+            val ta: TypedArray =
+                context.obtainStyledAttributes(attrs, R.styleable.BottomNavigationViewRounded)
+            val backgroundColor: Int =
+                ta.getColor(R.styleable.BottomNavigationViewRounded_bottomNavigationColor, NO_ID)
+            cornerRadius = ta.getDimensionPixelSize(
+                R.styleable.BottomNavigationViewRounded_bottomNavigationCornerRadius,
+                convertDpToPixel(10).toInt()
+            )
+
             if (backgroundColor != NO_ID) bottomNavigationDrawable.paint.color = backgroundColor
             ta.recycle()
         }
 
         background = bottomNavigationDrawable
-        val radius = convertDpToPixel()
+        val radius: Float = convertDpToPixel(cornerRadius)
         for (i in cornerDimensions.indices) cornerDimensions[i] = radius
     }
 
@@ -45,7 +54,7 @@ class BottomNavigationViewRounded(
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
         super.onSizeChanged(w, h, oldw, oldh)
 
-        val r = RectF(0f, 0f, w.toFloat(), h.toFloat())
+        val r: RectF = RectF(0f, 0f, w.toFloat(), h.toFloat())
 
         mPath = Path()
         mPath.addRoundRect(
@@ -56,7 +65,7 @@ class BottomNavigationViewRounded(
         mPath.close()
     }
 
-    private fun convertDpToPixel() =
-        50 * (Resources.getSystem().displayMetrics.densityDpi.toFloat() /
+    private fun convertDpToPixel(cornerRadius: Int) =
+        cornerRadius * (Resources.getSystem().displayMetrics.densityDpi.toFloat() /
                 DisplayMetrics.DENSITY_DEFAULT)
 }
