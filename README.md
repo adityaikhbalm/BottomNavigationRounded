@@ -45,7 +45,6 @@ dependencies {
 
 ## 💻 Compatibility
  * **Minimum Android SDK**: Requires a minimum API level of 21.
- * **Compile Android SDK**: Requires you to compile against API 30 or later.
 
 ## 🚀️ Getting Started
 #### XML Layout
