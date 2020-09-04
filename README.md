@@ -3,6 +3,8 @@
 
 Bottom Navigation View Rounded short BNVR it's basically BottomNavigationView with some custom to create navigation with rounded corners.
 
+<img src="https://github.com/adityaikhbalm/bottomnavigationrounded/blob/master/screenshot/Screenshot_20200904-104528.png" width="300px" height="500px">
+
 #### Latest version
 See the latest released BNVR version [here](https://github.com/adityaikhbalm/bottomnavigationrounded/releases).
 
